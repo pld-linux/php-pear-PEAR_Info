@@ -4,6 +4,7 @@
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_pearname} - Show Information about your PEAR install and its packages
+Summary(pl):	%{_pearname} - pokazywanie informacji o instalacji PEAR-a i jego pakietach
 Name:		php-pear-%{_pearname}
 Version:	1.0.6
 Release:	1
@@ -25,11 +26,25 @@ current PEAR install.
 - Has complete PEAR Credits (based on the packages you have
   installed).
 - Will show if there is a newer version than the one presently
-  installed (and what its state is)
+  installed (and what its state is).
 - Each package has an anchor in the form pkg_PackageName - where
-  PackageName is a case-sensitive PEAR package name
+  PackageName is a case-sensitive PEAR package name.
 
 This class has in PEAR status: %{_status}.
+
+%description -l pl
+Ten pakiet generuje wyczerpuj±c± stronê informacyjn± o aktualnej
+instalacji PEAR-a.
+- Format strony jest podobny do formatu phpinfo() oprócz u¿ytych
+  kolorów PEAR-a.
+- Ma pe³n± listê zas³ug PEAR-a (opart± na zainstalowanych pakietach).
+- Pokazuje, czy jest nowsza wersja zainstalowanych klas (i jaki jest
+  ich status).
+- Ka¿dy pakiet ma swoje zakotwiczenie w postaci pkg_NazwaPakietu -
+  gdzie NazwaPakietu to nazwa pakietu PEAR-a z rozró¿nieniem wielko¶ci
+  liter.
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
