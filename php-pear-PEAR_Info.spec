@@ -3,15 +3,16 @@
 %define         _subclass       Info
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
+
 Summary:	%{_pearname} - Show Information about your PEAR install and its packages
 Summary(pl):	%{_pearname} - pokazywanie informacji o instalacji PEAR-a i jego pakietach
 Name:		php-pear-%{_pearname}
-Version:	1.0.6
+Version:	1.5.1
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-# Source0-md5:	a8d4b23e20c6648eaf3b1c3eeb520b3f
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+# Source0-md5:	9f2d7cf80673ef14169db5815483fe12
 URL:		http://pear.php.net/package/PEAR_Info/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -60,4 +61,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc %{_pearname}-%{version}/tests
 %{php_pear_dir}/%{_class}/*.php
