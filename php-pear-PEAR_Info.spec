@@ -1,10 +1,10 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          PEAR
-%define         _subclass       Info
+%define		_class		PEAR
+%define		_subclass	Info
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 
-Summary:	%{_pearname} - Show Information about your PEAR install and its packages
+Summary:	%{_pearname} - show Information about your PEAR install and its packages
 Summary(pl):	%{_pearname} - pokazywanie informacji o instalacji PEAR-a i jego pakietach
 Name:		php-pear-%{_pearname}
 Version:	1.5.2
