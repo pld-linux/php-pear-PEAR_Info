@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - show Information about your PEAR install and its packages
-Summary(pl):	%{_pearname} - pokazywanie informacji o instalacji PEAR-a i jego pakietach
+Summary(pl.UTF-8):   %{_pearname} - pokazywanie informacji o instalacji PEAR-a i jego pakietach
 Name:		php-pear-%{_pearname}
 Version:	1.6.1
 Release:	1
@@ -38,23 +38,23 @@ current PEAR install.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Ten pakiet generuje wyczerpuj±c± stronê informacyjn± o aktualnej
+%description -l pl.UTF-8
+Ten pakiet generuje wyczerpujÄ…cÄ… stronÄ™ informacyjnÄ… o aktualnej
 instalacji PEAR-a.
-- Format strony jest podobny do formatu phpinfo() oprócz u¿ytych
-  kolorów PEAR-a.
-- Ma pe³n± listê zas³ug PEAR-a (opart± na zainstalowanych pakietach).
+- Format strony jest podobny do formatu phpinfo() oprÃ³cz uÅ¼ytych
+  kolorÃ³w PEAR-a.
+- Ma peÅ‚nÄ… listÄ™ zasÅ‚ug PEAR-a (opartÄ… na zainstalowanych pakietach).
 - Pokazuje, czy jest nowsza wersja zainstalowanych klas (i jaki jest
   ich status).
-- Ka¿dy pakiet ma swoje zakotwiczenie w postaci pkg_NazwaPakietu -
-  gdzie NazwaPakietu to nazwa pakietu PEAR-a z rozró¿nieniem wielko¶ci
+- KaÅ¼dy pakiet ma swoje zakotwiczenie w postaci pkg_NazwaPakietu -
+  gdzie NazwaPakietu to nazwa pakietu PEAR-a z rozrÃ³Å¼nieniem wielkoÅ›ci
   liter.
 
 Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no
@@ -63,7 +63,7 @@ AutoProv:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep
