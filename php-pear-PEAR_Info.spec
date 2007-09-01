@@ -7,13 +7,13 @@
 Summary:	%{_pearname} - show Information about your PEAR install and its packages
 Summary(pl.UTF-8):	%{_pearname} - pokazywanie informacji o instalacji PEAR-a i jego pakietach
 Name:		php-pear-%{_pearname}
-Version:	1.6.1
+Version:	1.7.0
 Release:	1
 Epoch:		0
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	c371dfc2cf196567c605df787a2faa9e
+# Source0-md5:	a3a2d928289a563c56821507a10aecb8
 URL:		http://pear.php.net/package/PEAR_Info/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -69,10 +69,6 @@ Testy dla PEAR::%{_pearname}.
 %prep
 %pear_package_setup
 
-# class/test -> tests
-install -d ./%{php_pear_dir}/tests/%{_pearname}
-mv ./%{php_pear_dir}/{%{_class}/tests/*,tests/%{_pearname}}
-
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
@@ -86,6 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc install.log
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
+%{php_pear_dir}/data/%{_pearname}
 
 %files tests
 %defattr(644,root,root,755)
