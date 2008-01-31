@@ -8,7 +8,7 @@ Summary:	%{_pearname} - show Information about your PEAR install and its package
 Summary(pl.UTF-8):	%{_pearname} - pokazywanie informacji o instalacji PEAR-a i jego pakietach
 Name:		php-pear-%{_pearname}
 Version:	1.7.0
-Release:	1
+Release:	2
 Epoch:		0
 License:	PHP 2.02
 Group:		Development/Languages/PHP
