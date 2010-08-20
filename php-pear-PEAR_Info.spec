@@ -7,13 +7,13 @@
 Summary:	%{_pearname} - show Information about your PEAR install and its packages
 Summary(pl.UTF-8):	%{_pearname} - pokazywanie informacji o instalacji PEAR-a i jego pakietach
 Name:		php-pear-%{_pearname}
-Version:	1.9.1
+Version:	1.9.2
 Release:	1
 Epoch:		0
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	93d9be0d1121f6986c0257581983de9c
+# Source0-md5:	a10ff525d7edd407daba83f8a2f85b38
 URL:		http://pear.php.net/package/PEAR_Info/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -57,8 +57,8 @@ Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
-AutoReq:	no
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
