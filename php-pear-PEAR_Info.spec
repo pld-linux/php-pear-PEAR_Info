@@ -3,26 +3,31 @@
 %define		_subclass	Info
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
-
 Summary:	%{_pearname} - show Information about your PEAR install and its packages
 Summary(pl.UTF-8):	%{_pearname} - pokazywanie informacji o instalacji PEAR-a i jego pakietach
 Name:		php-pear-%{_pearname}
 Version:	1.9.2
-Release:	1
+Release:	2
 Epoch:		0
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	a10ff525d7edd407daba83f8a2f85b38
 URL:		http://pear.php.net/package/PEAR_Info/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-common >= 3:4.1.0
+Requires:	php-pcre
 Requires:	php-pear
+Requires:	php-pear-Console_Getargs >= 1.3.3
 Requires:	php-pear-PEAR >= 1:1.3.2
+Suggests:	php-pear-PHPUnit
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# exclude optional dependencies
+%define		_noautoreq	pear(PHPUnit.*)
 
 %description
 This package generates a comprehensive information page for your
