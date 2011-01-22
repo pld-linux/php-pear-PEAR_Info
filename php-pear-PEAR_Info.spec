@@ -7,7 +7,7 @@ Summary:	%{_pearname} - show Information about your PEAR install and its package
 Summary(pl.UTF-8):	%{_pearname} - pokazywanie informacji o instalacji PEAR-a i jego pakietach
 Name:		php-pear-%{_pearname}
 Version:	1.9.2
-Release:	2
+Release:	3
 Epoch:		0
 License:	PHP 2.02
 Group:		Development/Languages/PHP
@@ -23,6 +23,7 @@ Requires:	php-pear
 Requires:	php-pear-Console_Getargs >= 1.3.3
 Requires:	php-pear-PEAR >= 1:1.3.2
 Suggests:	php-pear-PHPUnit
+Obsoletes:	php-pear-PEAR_Info-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -57,20 +58,6 @@ instalacji PEAR-a.
 
 Ta klasa ma w PEAR status: %{_status}.
 
-%package tests
-Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
-Group:		Development/Languages/PHP
-Requires:	%{name} = %{epoch}:%{version}-%{release}
-AutoProv:	no
-AutoReq:	no
-
-%description tests
-Tests for PEAR::%{_pearname}.
-
-%description tests -l pl.UTF-8
-Testy dla PEAR::%{_pearname}.
-
 %prep
 %pear_package_setup
 
@@ -89,7 +76,3 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}
 %{php_pear_dir}/data/%{_pearname}
-
-%files tests
-%defattr(644,root,root,755)
-%{php_pear_dir}/tests/*
