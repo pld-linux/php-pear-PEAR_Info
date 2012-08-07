@@ -1,13 +1,13 @@
-%include	/usr/lib/rpm/macros.php
 %define		_class		PEAR
 %define		_subclass	Info
 %define		_status		stable
-%define		_pearname	%{_class}_%{_subclass}
+%define		_pearname	PEAR_Info
+%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - show Information about your PEAR install and its packages
 Summary(pl.UTF-8):	%{_pearname} - pokazywanie informacji o instalacji PEAR-a i jego pakietach
 Name:		php-pear-%{_pearname}
 Version:	1.9.2
-Release:	4
+Release:	5
 Epoch:		0
 License:	PHP 2.02
 Group:		Development/Languages/PHP
@@ -17,8 +17,8 @@ URL:		http://pear.php.net/package/PEAR_Info/
 BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
+Requires:	php(pcre)
 Requires:	php-common >= 3:4.1.0
-Requires:	php-pcre
 Requires:	php-pear
 Requires:	php-pear-Console_Getargs >= 1.3.3
 Requires:	php-pear-PEAR >= 1:1.3.2
@@ -73,6 +73,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc install.log
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}
+%{php_pear_dir}/PEAR/*.php
+%{php_pear_dir}/PEAR/Info
 %{php_pear_dir}/data/%{_pearname}
