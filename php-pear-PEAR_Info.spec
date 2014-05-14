@@ -1,5 +1,3 @@
-%define		_class		PEAR
-%define		_subclass	Info
 %define		_status		stable
 %define		_pearname	PEAR_Info
 %include	/usr/lib/rpm/macros.php
