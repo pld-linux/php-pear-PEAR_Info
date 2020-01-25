@@ -1,6 +1,5 @@
 %define		_status		stable
 %define		_pearname	PEAR_Info
-%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - show Information about your PEAR install and its packages
 Summary(pl.UTF-8):	%{_pearname} - pokazywanie informacji o instalacji PEAR-a i jego pakietach
 Name:		php-pear-%{_pearname}
